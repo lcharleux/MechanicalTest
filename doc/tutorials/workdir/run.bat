@@ -1,0 +1,3 @@
+call abaqus job=Traction_2D_Sim1 interactive
+call abaqus cae noGUI=Traction_2D_Sim1_abqpostproc.py
+call python Traction_2D_Sim1_pypostproc.py
