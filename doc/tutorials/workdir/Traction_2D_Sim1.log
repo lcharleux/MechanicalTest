@@ -1,0 +1,16 @@
+Abaqus JOB Traction_2D_Sim1
+Abaqus 6.13-1
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens.
+<85 out of 90 licenses remain available>.
+Begin Analysis Input File Processor
+Mon Nov  7 23:30:40 2016
+Run pre
+Mon Nov  7 23:30:43 2016
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+Mon Nov  7 23:30:43 2016
+Run standard
+Mon Nov  7 23:31:07 2016
+End Abaqus/Standard Analysis
+Abaqus JOB Traction_2D_Sim1 COMPLETED

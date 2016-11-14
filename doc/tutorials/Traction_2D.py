@@ -16,6 +16,7 @@ def create_dir(path):
 
 #-------------------------------------------------------------------------------
 # SETTINGS
+execfile("local_settings.py")
 workdir   = "workdir/"
 outputdir = "outputs/"
 simName   = "Traction_2D_Sim1"
@@ -28,8 +29,9 @@ create_dir(workdir + outputdir)
 
 #-------------------------------------------------------------------------------
 # MESH DEFINITIONS
-sample_mesh = mt.models.sample_mesh_2D_quarter("D:\gmsh-2.12.0-Windows\gmsh.exe", 
-                                   workdir, 
+sample_mesh = mt.models.sample_mesh_2D_quarter(
+                                   gmsh_path = GMSH_PATH, 
+                                   workdir = workdir, 
                                    L = 20.,
                                    l = 3.,
                                    r = 2.,
@@ -44,8 +46,8 @@ steps = [
         mt.models.tension_2D_step_input(name = "LOADING1",
                                             control_type = "disp", 
                                             duration = 1., 
-                                            nframes = 40,
-                                            controlled_value = 2.0),
+                                            nframes = 100,
+                                            controlled_value = 1.0),
         ]                                                                                                  
 #-------------------------------------------------------------------------------
                                  

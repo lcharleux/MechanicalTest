@@ -27,7 +27,7 @@ def sample_mesh_2D_quarter(gmsh_path, workdir, L = 20., l = 3., r = 2., lc1 = 0.
         r = r,
         lc1 = lc1)
   open(workdir + geoPath + ".geo", "w").write(geo)
-  p = subprocess.Popen("{0} -2 {1}".format(gmsh_path, geoPath + ".geo"), cwd = workdir, shell=True, stdout = subprocess.PIPE)
+  p = subprocess.Popen("{0} -2 -algo 'delquad' {1}".format(gmsh_path, geoPath + ".geo"), cwd = workdir, shell=True, stdout = subprocess.PIPE)
   trash = p.communicate()
   mesh = Mesh.read_msh(workdir + geoPath + ".msh")
   mesh.element_set_to_node_set(tag = "SURFACE")
